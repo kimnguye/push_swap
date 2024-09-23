@@ -6,7 +6,7 @@
 /*   By: kimnguye <kimnguye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 16:09:38 by kimnguye          #+#    #+#             */
-/*   Updated: 2024/09/20 15:33:49 by kimnguye         ###   ########.fr       */
+/*   Updated: 2024/09/23 16:41:58 by kimnguye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,8 @@ int	ft_ps_is_sorted(t_list **pile_a, t_list **pile_b)
 {
 	t_list	*ptr;
 
+	if (!*pile_a)
+		return (0);
 	ptr = *pile_a;
 	while (ptr->next)
 	{
