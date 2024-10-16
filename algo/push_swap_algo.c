@@ -6,11 +6,11 @@
 /*   By: kimnguye <kimnguye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 11:50:04 by kimnguye          #+#    #+#             */
-/*   Updated: 2024/09/20 15:35:39 by kimnguye         ###   ########.fr       */
+/*   Updated: 2024/10/16 17:36:03 by kimnguye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	instructions_ctr(t_list **a, t_list **b);
 int	ft_algo_three(t_list **a);

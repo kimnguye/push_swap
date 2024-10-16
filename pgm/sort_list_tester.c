@@ -6,16 +6,16 @@
 /*   By: kimnguye <kimnguye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 14:33:07 by kimnguye          #+#    #+#             */
-/*   Updated: 2024/09/20 15:33:49 by kimnguye         ###   ########.fr       */
+/*   Updated: 2024/10/16 17:42:19 by kimnguye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
+/*Sort the list entered in argument*/
 int	main(int argc, char **argv)
 {
 	t_list	**a;
-	t_list	*b;
 
 	if (argc < 2)
 		return (1);
@@ -27,7 +27,7 @@ int	main(int argc, char **argv)
 		return (ft_printf("Error\n"), 1);
 	ft_sort_list(a);
 	ft_print_list(a);
-	if (ft_ps_is_sorted(a, &b))
+	if (ft_ps_is_sorted(a, NULL))
 		ft_printf("Sorted list: YES\n");
 	else
 		ft_printf("Error: the list is not sorted !\n");

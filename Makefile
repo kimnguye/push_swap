@@ -2,6 +2,7 @@ PS = push_swap
 CHECKER = checker
 CTR = counter
 SORT = sort_list
+RULES_TESTER = rules_tester
 
 BONUS = bonus/push_swap_bonus.c bonus/push_swap_translator_bonus.c \
 		bonus/push_swap_rules_bonus.c bonus/push_swap_rules2_bonus.c
@@ -11,18 +12,18 @@ UTILS = push_swap_list_index.c push_swap_list_utils.c\
 
 RULES = push_swap_rules.c push_swap_rules2.c \
 
-TURKISH = push_swap_turkish.c push_swap_turkish_find_target.c \
+TURKISH = push_swap_algo.c \
+		push_swap_turkish.c push_swap_turkish_find_target.c \
 		push_swap_turkish_calc_moves.c \
 		push_swap_turkish_info.c push_swap_turkish_exec_moves.c\
 
-SRCS = push_swap_algo.c \
-	$(UTILS:%=utils/%) $(TURKISH:%=algo_turkish/%)
+SRCS =  $(UTILS:%=utils/%) $(TURKISH:%=algo/%)
 
 LIBFT_MAKE = make --no-print-directory -C libft
 LIBFT = libft.a
 CC = cc -Wall -Wextra -Werror
 
-all: $(LIBFT) $(PS) $(CTR) $(SORT) $(CHECKER)
+all: $(LIBFT) $(PS) $(CTR) $(SORT) $(CHECKER) $(RULES_TESTER)
 
 clean:
 	@echo "Deleting..."
@@ -52,6 +53,9 @@ $(LIBFT):
 
 $(PS): $(PS).c $(SRCS) $(LIBFT)
 	$(CC) -o $(PS) $(PS).c $(SRCS) $(RULES:%=utils/%) $(LIBFT)
+
+$(RULES_TESTER): pgm/push_swap_rules_tester.c $(SRCS) $(LIBFT)
+	$(CC) -o $(RULES_TESTER) pgm/push_swap_rules_tester.c $(SRCS) $(RULES:%=utils/%) $(LIBFT)
 
 #.PHONY POUR LES RULES
 .PHONY: clean fclean re all bonus

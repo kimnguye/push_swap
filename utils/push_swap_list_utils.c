@@ -6,7 +6,7 @@
 /*   By: kimnguye <kimnguye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 16:09:38 by kimnguye          #+#    #+#             */
-/*   Updated: 2024/09/23 16:41:58 by kimnguye         ###   ########.fr       */
+/*   Updated: 2024/10/16 17:43:33 by kimnguye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,9 +86,12 @@ int	ft_ps_is_sorted(t_list **pile_a, t_list **pile_b)
 			return (0);
 		ptr = ptr->next;
 	}
-	ptr = *pile_b;
-	if (ptr)
-		return (0);
+	if (pile_b)
+	{
+		ptr = *pile_b;
+		if (ptr)
+			return (0);
+	}
 	return (1);
 }
 
