@@ -6,7 +6,7 @@
 /*   By: kimnguye <kimnguye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 15:09:00 by kimnguye          #+#    #+#             */
-/*   Updated: 2024/10/16 17:45:45 by kimnguye         ###   ########.fr       */
+/*   Updated: 2024/10/16 17:45:53 by kimnguye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int	main(int argc, char **argv)
 	t_list	**a;
 	t_list	**b;
 	char	*str;
-
 
 	str = "10 20 30";
 	if (argc < 2)
