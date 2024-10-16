@@ -6,7 +6,7 @@
 /*   By: kimnguye <kimnguye@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 17:25:43 by kimnguye          #+#    #+#             */
-/*   Updated: 2024/09/18 14:39:05 by kimnguye         ###   ########.fr       */
+/*   Updated: 2024/10/16 17:47:02 by kimnguye         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,6 @@
 # define NO 'n'
 
 # define INT_NO_STACK -99
-
-typedef struct s_rdx {
-	int	*val;
-	int	*old_pos;
-	int	*new_pos;
-}	t_rdx;
 
 typedef struct s_tks {
 	int	ra;
